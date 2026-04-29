@@ -1,37 +1,37 @@
 # Agent Sprite Forge
 
-Traditional Chinese README: [README.zh-TW.md](./README.zh-TW.md)
+English README: [README.md](./README.md)
 
 ![Agent Sprite Forge Banner](./src/banner.png)
 
-> Turn natural-language prompts into game-ready 2D sprites and layered 2D maps with Codex.
+> 把自然語言需求直接變成可用於遊戲的 2D sprite 與分層 2D 地圖。
 >
-> Plan with an agent. Render with built-in image generation. Export clean transparent sheets, GIFs, maps, props, and collision-ready scene data.
+> 由 agent 規劃資產，由 Codex 生圖，再由本地 processor 輸出乾淨的透明 sheet、GIF、地圖、props 與可接碰撞資料的場景。
 
 ## Showcase
 
-### Text To Sprite
+### 文字到 Sprite
 
 <table>
   <tr>
     <td align="center" width="33%">
       <img src="./src/goku-kame.gif" alt="Goku Kamehameha" width="192" />
       <br />
-      <strong>Goku with Kamehameha</strong>
+      <strong>悟空使用龜派氣功</strong>
       <br />
       <code>help me to use $generate2dsprite to create a goku is attacking with Kamehameha</code>
     </td>
     <td align="center" width="33%">
       <img src="./src/naruto-rasengan.gif" alt="Naruto Rasengan" width="192" />
       <br />
-      <strong>Naruto using Rasengan</strong>
+      <strong>鳴人使用螺旋丸</strong>
       <br />
       <code>使用 $generate2dsprite 幫我做一個鳴人使用螺旋丸的元素</code>
     </td>
   </tr>
 </table>
 
-### Spell Bundle / Cast, Projectile, Impact
+### Spell Bundle / Cast、Projectile、Impact
 
 <table>
   <tr>
@@ -53,40 +53,40 @@ Traditional Chinese README: [README.zh-TW.md](./README.zh-TW.md)
   </tr>
 </table>
 
-Prompt:
+Prompt：
 
 ```text
 Use  $generate2dsprite to create a fire mage cast animation with projectile and impact.
 ```
 
-### Game Sprite / Four-Direction Walk
+### Game Sprite / 四方向行走
 
 <table>
   <tr>
     <td align="center" width="25%">
       <img src="./src/down.gif" alt="Samurai walking down" width="144" />
       <br />
-      <strong>Down</strong>
+      <strong>下</strong>
     </td>
     <td align="center" width="25%">
       <img src="./src/left.gif" alt="Samurai walking left" width="144" />
       <br />
-      <strong>Left</strong>
+      <strong>左</strong>
     </td>
     <td align="center" width="25%">
       <img src="./src/right.gif" alt="Samurai walking right" width="144" />
       <br />
-      <strong>Right</strong>
+      <strong>右</strong>
     </td>
     <td align="center" width="25%">
       <img src="./src/up.gif" alt="Samurai walking up" width="144" />
       <br />
-      <strong>Up</strong>
+      <strong>上</strong>
     </td>
   </tr>
 </table>
 
-Prompt:
+Prompt：
 
 ```text
 Use Generate 2D Sprite to create a top-down 4x4 player_sheet for a wandering young samurai with a red scarf and short katana.
@@ -98,19 +98,19 @@ Each frame must fit fully inside its cell, with clear margin on all sides.
 Retro JRPG pixel-art style.
 ```
 
-### Reference To Sprite
+### 參考圖到 Sprite
 
 <table>
   <tr>
     <td align="center" width="35%">
       <img src="./src/ref1.jpg" alt="Reference crocodile" width="180" />
       <br />
-      <strong>Reference</strong>
+      <strong>參考圖</strong>
     </td>
     <td align="center" width="65%">
       <img src="./src/croc_stone_play.gif" alt="Crocodile playing with a stone" width="220" />
       <br />
-      <strong>Generated sprite animation</strong>
+      <strong>生成結果</strong>
       <br />
       <code>幫我使用 $generate2dsprite 做一個這隻鱷魚玩手上石頭的元素</code>
     </td>
@@ -119,26 +119,26 @@ Retro JRPG pixel-art style.
     <td align="center" width="35%">
       <img src="./src/ref2.jpg" alt="Reference male character" width="180" />
       <br />
-      <strong>Reference</strong>
+      <strong>參考圖</strong>
     </td>
     <td align="center" width="65%">
       <img src="./src/cz.gif" alt="Male character teaching animation" width="220" />
       <br />
-      <strong>Generated sprite animation</strong>
+      <strong>生成結果</strong>
       <br />
       <code>Use  $generate2dsprite to create this male character teaching.</code>
     </td>
   </tr>
 </table>
 
-### Codex One-Shot Playable Games
+### Codex 一次到位的可玩遊戲
 
-End-to-end playable games designed and built by Codex in a single prompt, with sprites and props produced through `$generate2dsprite` and map scenes planned through `$generate2dmap` when the game needs structured maps.
+完全由 Codex 在單一 prompt 內規劃並完成的可玩遊戲。sprites 與 props 透過 `$generate2dsprite` 生成；當遊戲需要結構化地圖時，地圖場景由 `$generate2dmap` 規劃。
 
-#### Neon Breach — Cyberpunk Side-Scroller
+#### Neon Breach — 賽博龐克橫向捲軸
 
 <p align="center">
-  <img src="./src/neon-breach.png" alt="Neon Breach cyberpunk side-scroller" width="720" />
+  <img src="./src/neon-breach.png" alt="Neon Breach 賽博龐克橫向捲軸" width="720" />
 </p>
 
 Prompt:
@@ -147,19 +147,19 @@ Prompt:
 use $generate2dsprite to create a 2D side-scrolling game similar to Mega Man. It should include attack mechanics, map elements, and all the essential features. I would like you to design it, and all the necessary assets should be created using this skill. It needs to be an actually playable game, with a cyberpunk story setting.
 ```
 
-#### 晴嵐御魂錄 — Sengoku-Era Pokémon-like
+#### 晴嵐御魂錄 — 戰國時代的 Pokémon-like
 
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="./src/pokemonlike2.png" alt="Sengoku starter selection screen" width="360" />
+      <img src="./src/pokemonlike2.png" alt="戰國御魂選擇畫面" width="360" />
       <br />
-      <strong>Starter selection</strong>
+      <strong>初始御魂選擇</strong>
     </td>
     <td align="center" width="50%">
-      <img src="./src/pokemonlike.png" alt="Sengoku battle screen" width="360" />
+      <img src="./src/pokemonlike.png" alt="戰國對戰畫面" width="360" />
       <br />
-      <strong>Battle scene</strong>
+      <strong>戰鬥場景</strong>
     </td>
   </tr>
 </table>
@@ -171,24 +171,24 @@ Use $generate2dsprite to create a 2D game similar to Pokemon. You only need to b
 Please also pay attention to the size of the elements (the generated sprites need to be proportionally correct when placed into the game), and a game map must be generated as well. Basically, just help me make a game like this—I believe you won't have any problem doing this with that skill! Just one scene is enough, and there's no need for too many monster characters. Let's just start with a few, and we can slowly expand on it later!
 ```
 
-### Layered RPG Map / Clean HD Reference Pipeline
+### 分層 RPG 地圖 / Clean HD Reference Pipeline
 
-`$generate2dmap` now models maps as a production pipeline instead of a single strategy label. It chooses a visual model, runtime object model, collision model, art direction, and export target. For layered raster maps it defaults to a clean hand-painted HD game-map style for readability, generates a ground-only base map, uses that visible base as a wrapper reference for a dressed planning pass, batches small props into a 3x3 prop pack, extracts transparent props, places them with y-sort metadata, and composes a flattened preview.
+`$generate2dmap` 現在會把地圖視為一個 production pipeline，而不是單純四選一的策略。它會選擇 visual model、runtime object model、collision model、art direction 和 export target。對分層 raster map 來說，預設會使用乾淨、手繪感的 HD game-map style 來提高可讀性，先生成 ground-only base map，再把這張 base 顯示在對話中作為 wrapper reference，生成 dressed planning pass，接著把小型 props 批次做成 3x3 prop pack，切割成透明 props，寫入 y-sort placement metadata，最後合成 flattened preview。
 
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="./src/cyber-canal-base.png" alt="Ground-only cyberpunk canal RPG base map" width="300" />
+      <img src="./src/cyber-canal-base.png" alt="Cyberpunk canal ground-only RPG base map" width="300" />
       <br />
       <strong>Ground-only base map</strong>
     </td>
     <td align="center" width="33%">
-      <img src="./src/cyber-canal-dressed-reference.png" alt="Dressed cyberpunk canal reference map" width="300" />
+      <img src="./src/cyber-canal-dressed-reference.png" alt="Cyberpunk canal dressed reference map" width="300" />
       <br />
       <strong>Dressed reference pass</strong>
     </td>
     <td align="center" width="33%">
-      <img src="./src/cyber-canal-prop-pack.png" alt="Generated 3x3 cyberpunk canal prop pack" width="300" />
+      <img src="./src/cyber-canal-prop-pack.png" alt="生成出的 cyberpunk canal 3x3 prop pack" width="300" />
       <br />
       <strong>3x3 generated prop pack</strong>
     </td>
@@ -196,31 +196,31 @@ Please also pay attention to the size of the elements (the generated sprites nee
 </table>
 
 <p align="center">
-  <img src="./src/cyber-canal-layered-preview.png" alt="Layered cyberpunk canal RPG map preview" width="720" />
+  <img src="./src/cyber-canal-layered-preview.png" alt="分層 cyberpunk canal RPG map preview" width="720" />
   <br />
   <strong>Flattened layered RPG map preview</strong>
 </p>
 
-Pipeline:
+Pipeline：
 
 ```text
 layered_raster + y_sorted_props + precise_shapes + trigger_zones + raw_canvas
 ```
 
-Reference-guided layered maps use this flow:
+使用 reference 的分層地圖流程：
 
-1. Pick the art direction: `clean_hd` by default for readable game maps, `pixel_inspired` for a softer pixel-adjacent look, or `retro_pixel` only when the user asks for classic pixel art.
-2. Generate a ground-only base map.
-3. Show the base map in the conversation context and generate a dressed reference from it.
-4. Generate one-by-one props or a tightly margined prop pack from the dressed reference.
-5. Run soft-matte chroma-key cleanup with despill before extracting props when magenta fringe appears.
-6. Compose the final runtime preview from the original base plus extracted transparent props.
+1. 先選 art direction：預設用 `clean_hd` 產出可讀性高的遊戲地圖；需要柔和像素感時用 `pixel_inspired`；只有使用者明確要求復古 pixel art 時才用 `retro_pixel`。
+2. 先生成 ground-only base map。
+3. 把 base map 顯示在對話上下文，再根據它生成 dressed reference。
+4. 依 dressed reference 生成單張 props，或生成有足夠留白的 prop pack。
+5. 如果有洋紅邊，先用 soft-matte chroma-key cleanup 加 despill，再切出透明 props。
+6. 最終 runtime preview 由原始 base map 加上切好的透明 props 合成。
 
-### Godot Editable TileMap Export
+### Godot 可調整 TileMap 匯出
 
-`$generate2dmap` can also produce an editable Godot map project instead of a single flattened image. In this showcase, the image-generated tileset and 3x3 prop sheet are wired into a Godot 4.5 scene with editable `TileMapLayer` nodes, separate prop sprites, encounter grass `Area2D` zones, collision `StaticBody2D` blockers, exit zones, metadata JSON, and a debug player/camera for immediate inspection.
+`$generate2dmap` 也可以輸出可在 Godot 裡調整的地圖工程，而不是只給一張 flattened 圖。這個 showcase 使用 image-generated tileset 和 3x3 prop sheet，接到 Godot 4.5 scene，產出可編輯的 `TileMapLayer`、分離式 prop sprites、遇怪草叢 `Area2D`、碰撞 `StaticBody2D`、出口區、metadata JSON，以及可立即開場景檢查的 debug player/camera。
 
-Prompt:
+Prompt：
 
 ```text
 幫我使用 Generate 2D Map 生成一個2d rpg的遊戲地圖, 要有分開的Props, 包含遇怪獸的草叢, 連接Godot遊戲引擎，做完之後要可以開啟godot進行所有的元素調整
@@ -229,7 +229,7 @@ Prompt:
 <p align="center">
   <img src="./src/godot-editor.png" alt="Generate2DMap Godot editor scene with editable TileMapLayer and nodes" width="860" />
   <br />
-  <strong>Godot editor scene: editable layers, props, zones, collision, exits, and debug player</strong>
+  <strong>Godot editor scene：可調整 layers、props、zones、collision、exits 與 debug player</strong>
 </p>
 
 <table>
@@ -259,86 +259,89 @@ Prompt:
   </tr>
 </table>
 
-Godot output includes:
+Godot 輸出包含：
 
-- Editable `TileMapLayer` nodes for ground, water/bridge, decor, encounter grass, and obstacles.
-- `YSorted_SeparateProps` with independent `Sprite2D` props.
-- Encounter grass `Area2D` zones with encounter tables.
-- Collision `StaticBody2D` blockers for boundaries, water, cliffs, and prop bases.
-- Exit `Area2D` zones for route transitions.
-- A `CharacterBody2D` debug player with camera for opening and testing the scene immediately.
+- 可調整的 `TileMapLayer`：ground、water/bridge、decor、encounter grass、obstacles。
+- `YSorted_SeparateProps` 裡的獨立 `Sprite2D` props。
+- 帶 encounter table 的遇怪草叢 `Area2D` zones。
+- 邊界、水域、斷崖與 prop base 的 `StaticBody2D` collision blockers。
+- 用於路線轉場的出口 `Area2D` zones。
+- 可立即開場景測試的 `CharacterBody2D` debug player 與 camera。
 
-Pipeline:
+Pipeline：
 
 ```text
 image_gen tileset + prop_pack_3x3 + layered_tilemap + separate_props + trigger_zones + Godot_TileMap
 ```
 
-Codex-first 2D game asset skills for game-ready 2D sprites, props, FX, and playable map scenes.
+這是一組以 Codex 為核心的 2D game asset skills，用來產出可直接拿去做遊戲資產與可玩地圖場景的 2D sprites、props、FX 與地圖。
 
-This repository currently ships two skills:
+這個 repo 目前提供兩個 skills：
 
-- [`skills/generate2dsprite`](./skills/generate2dsprite): generate and postprocess sprites, animation sheets, props, and FX.
-- [`skills/generate2dmap`](./skills/generate2dmap): choose a 2D map pipeline, generate base maps or prop packs, extract transparent props, compose previews, and produce collision/zones metadata.
+- [`skills/generate2dsprite`](./skills/generate2dsprite)：生成並後處理 sprites、動畫 sheets、props 與 FX。
+- [`skills/generate2dmap`](./skills/generate2dmap)：選擇 2D map pipeline，生成 base map 或 prop pack，切出透明 props，合成 preview，並產出 collision / zones metadata。
 
-`$generate2dmap` uses `$generate2dsprite` when the chosen map pipeline needs reusable transparent props. Small environmental props can be batched into `2x2`, `3x3`, or `4x4` prop packs, then extracted into individual transparent props. Simple maps can stay as a single baked image.
+`$generate2dmap` 只有在選定的地圖 pipeline 需要可重用透明 props 時，才會使用 `$generate2dsprite`。小型環境物件可以批次生成為 `2x2`、`3x3` 或 `4x4` prop pack，再切成個別透明 props。簡單地圖可以維持單張 baked image。
 
-When a visual reference is involved, both skills use the same wrapper rule: make the image visible in the conversation first. Attached images and freshly generated images are already visible; local files should be opened with `view_image` before asking built-in image generation to preserve identity, style, map layout, or sprite lineage.
+當流程需要視覺 reference 時，兩個 skills 都遵守同一個 wrapper 規則：先讓圖片出現在對話上下文。使用者上傳的圖片與剛生成的圖片已經在上下文中；local file 則先用 `view_image` 打開，再要求內建 image generation 保留角色 identity、風格、地圖 layout 或 sprite 進化脈絡。
 
-Codex is the primary target because Codex already has built-in image generation. That lets one agent handle the full loop:
+之所以先以 Codex 為主，是因為 Codex 本身就有內建 image generation，所以整個流程可以留在同一個 agent 內完成：
 
-1. Plan the asset or map pipeline.
-2. Generate the raw sprite sheet, prop, or map image.
-3. Run deterministic local post-processing for chroma-key cleanup, frame extraction, alignment, QC, and transparent PNG/GIF export.
-4. Assemble map scenes with collision, zones, prop placement, prop-pack manifests, and preview images when needed.
+1. 由 agent 規劃資產類型、動畫形式或地圖 pipeline。
+2. 由 Codex 生成 raw sprite sheet、prop 或 map image。
+3. 由本地 processor 做去背、切格、對齊、基本 QC，最後輸出透明 PNG / GIF。
+4. 需要時組裝地圖場景，包含 collision、zones、prop placement、prop-pack manifest 與 preview image。
 
-The current focus is 2D game assets and map scenes, not full game-pack automation.
+目前這個 repo 的重點是 2D 遊戲資產與地圖場景，不是整包遊戲 pack 自動化。
 
-## What It Can Generate
+## 可以生成什麼
 
-- Creatures
-- Characters
-- Players and NPCs
-- Spell casts
-- Projectiles
-- Impacts and explosions
-- FX sheets
-- Small bundles such as `unit_bundle`, `spell_bundle`, and `combat_bundle`
-- Reference-guided sprite variants, animation sheets, and evolution lines
-- Single baked 2D maps
-- Clean HD hand-painted layered maps
-- Layered base maps with transparent props
-- Dressed-reference guided layered maps
-- 2D map prop packs such as `2x2`, `3x3`, and `4x4`
-- Collision and zone metadata for playable maps
-- Flattened map previews for QA and showcase
-- Godot-ready editable maps with `TileMapLayer`, separate props, `Area2D` encounter grass, `StaticBody2D` collision, exit zones, and debug player scenes
+- Creature
+- Character
+- Player / NPC
+- Spell cast
+- Projectile
+- Impact / explosion
+- FX sheet
+- 小型 bundle，例如 `unit_bundle`、`spell_bundle`、`combat_bundle`
+- 依 reference 生成的 sprite 變體、動畫 sheet 與進化線
+- 單張 baked 2D map
+- clean HD 手繪風分層地圖
+- base map + 透明 props 的分層地圖
+- 依 dressed reference 規劃 props 擺放的分層地圖
+- `2x2`、`3x3`、`4x4` 這類 2D map prop pack
+- 可玩地圖用的 collision / zone metadata
+- 給 QA 與 showcase 用的 flattened map preview
+- Godot 可開啟調整的地圖工程，包含 `TileMapLayer`、分離式 props、`Area2D` 遇怪草叢、`StaticBody2D` 碰撞、出口區與 debug player scene
 
-## Why Codex First
+## 為什麼先做 Codex 版本
 
-This repo is intentionally Codex-first because Codex can generate images directly inside the same workflow.
+因為 Codex 可以直接在同一個工作流內生圖，流程會乾淨很多：
 
-That gives you a much cleaner pipeline:
+- 不需要另外接 image API
+- 不需要額外的 prompt builder service
+- 不需要獨立 sprite backend
+- 由同一個 agent 規劃資產
+- 由本地 processor 負責可重現的後處理
 
-- No separate image API wiring
-- No external sprite backend
-- No extra prompt-builder service
-- One agent decides the asset plan
-- One local processor handles deterministic cleanup and export
+這個 repo 的設計理念是：
 
-The script is not the creative brain. The agent decides:
+- 美術規劃交給 agent
+- 去背、切圖、對齊、輸出交給 deterministic processor
 
-- Asset type
-- Action type
-- Bundle shape
-- Sheet layout
-- Frame count
-- Alignment strategy
-- Whether detached effects should be kept or filtered
+也就是說，agent 會決定：
 
-The Python script only performs deterministic pixel operations.
+- asset type
+- action type
+- bundle shape
+- sheet layout
+- frame count
+- alignment strategy
+- detached effects 要不要保留
 
-## Repository Layout
+Python script 不負責創意判斷，只負責穩定執行像素層級的處理。
+
+## Repo 結構
 
 ```text
 agent-sprite-forge/
@@ -369,11 +372,11 @@ agent-sprite-forge/
         generate2dsprite.py
 ```
 
-## Install
+## 安裝方式
 
 ### Option 1: Windows PowerShell
 
-Clone the repo, install the local processor dependencies, then copy both skills into your Codex skills directory:
+先 clone repo，安裝本地 processor 依賴，再把兩個 skills 複製到 Codex skills 目錄：
 
 ```powershell
 git clone https://github.com/0x0funky/agent-sprite-forge.git
@@ -395,26 +398,28 @@ mkdir -p ~/.codex/skills
 cp -R ./skills/* ~/.codex/skills/
 ```
 
-Start a new Codex session after installation so the skill is loaded cleanly.
+安裝完後建議重新開一個新的 Codex session，讓 skill 重新載入。
 
-## Python Requirements
+## Python 依賴
 
-The local post-processor depends on:
+本地後處理目前依賴：
 
 - `Pillow`
 - `numpy`
 
-They are listed in [`requirements.txt`](./requirements.txt). Codex handles image generation itself, but these Python packages are still needed for:
+這些都列在 [`requirements.txt`](./requirements.txt)。
 
-- Magenta background removal
-- Frame splitting
-- Bounding-box extraction
-- Alignment and rescaling
-- Transparent GIF and PNG export
+雖然 Codex 本身負責生圖，但你還是需要這些 Python 套件來完成：
 
-## Suggested Prompts
+- 洋紅背景去背
+- 切格
+- 主體 bbox 偵測
+- 對齊與縮放
+- 透明 PNG / GIF 輸出
 
-### Basic
+## 建議 Prompt
+
+### 基本用法
 
 ```text
 Use  $generate2dsprite to create a 3x3 idle for an ultimate earth titan.
@@ -442,7 +447,7 @@ Use  $generate2dsprite to create a fireball projectile loop and a matching explo
 Use  $generate2dsprite to create a side-view summon entrance effect for a thunder wolf spirit.
 ```
 
-### Character / Monster Examples
+### Character / Monster 範例
 
 ```text
 Use  $generate2dsprite to create Omegamon attack and right-move animation assets.
@@ -456,7 +461,7 @@ Use  $generate2dsprite to create a golden divine boar 2x2 idle animation.
 Use  $generate2dsprite to create a Naruto-style rasengan cast sheet in 2x3.
 ```
 
-### Map Examples
+### 地圖範例
 
 ```text
 Use $generate2dmap to create a small fixed-screen pixel-art battle arena with simple collision.
@@ -470,31 +475,31 @@ Use $generate2dmap to create a top-down RPG forest shrine map. Use a layered ras
 Use $generate2dmap to revise this existing map into a layered raster map. Keep the background baked, but split the gate and lanterns into reusable transparent props with y-sort placement metadata.
 ```
 
-## What You Get
+## 會輸出什麼
 
-For a typical sheet output:
+一般 sheet 類型的輸出通常包含：
 
 - `raw-sheet.png`
 - `raw-sheet-clean.png`
 - `sheet-transparent.png`
-- Frame PNGs
+- frame PNG
 - `animation.gif`
 - `prompt-used.txt`
 - `pipeline-meta.json`
 
-For player walk sheets, you also get direction strips and per-direction GIFs.
+如果是 player walk sheet，通常還會額外輸出各方向 strip 與各方向 GIF。
 
-For a map output, the result depends on the chosen pipeline:
+如果是地圖輸出，結果會依選擇的 pipeline 而定：
 
-- Single baked map: a complete map image, optional prompt file, and optional collision metadata.
-- Layered raster map: a base map, generated prop folders or prop-pack extraction manifest, prop placement metadata, collision/zones metadata, and a flattened layered preview.
+- 單張 baked map：完整地圖圖檔、可選的 prompt file，以及可選的 collision metadata。
+- Layered raster map：base map、生成出的 prop folders 或 prop-pack extraction manifest、prop 擺放資料、collision/zones metadata，以及 flattened layered preview。
 
-## Notes
+## 備註
 
-- Best results come from prompts that clearly specify view, action, and the desired motion style.
-- Large creatures often work better as `3x3 idle`.
-- Small spells and projectiles often work better as `1x4`, `2x2`, or `2x3`.
-- For commercial projects, prefer original characters or IP that you control.
+- Prompt 越清楚，結果通常越穩。最好明確描述視角、動作、動畫型態與尺寸。
+- 大型 creature 通常比較適合 `3x3 idle`。
+- 小型 spell / projectile 通常比較適合 `1x4`、`2x2` 或 `2x3`。
+- 如果要商用，建議優先使用原創角色或你自己持有權利的 IP。
 
 ## Star History
 
@@ -506,6 +511,6 @@ For a map output, the result depends on the chosen pipeline:
  </picture>
 </a>
 
-## License
+## 授權
 
-MIT. See [LICENSE](./LICENSE).
+MIT。請見 [LICENSE](./LICENSE)。
