@@ -1,0 +1,46 @@
+Asset plan
+- asset_type: character
+- action: idle
+- view: 3/4
+- sheet: 2x2
+- art_style: pixel_art
+- bundle: single_asset
+
+Prompt sent to GenerateImage:
+
+A 2x2 sprite sheet (4 equal cells in a 2x2 grid) of a 16-bit pixel-art fire mage idle
+animation, 3/4 view from slightly above. Subject identity: a young fire mage wearing a
+deep crimson hooded robe with golden trim, holding a wooden staff topped with a small
+floating ember; warm orange and red palette, dark crisp pixel outlines, saturated colors,
+NOT cute, battle-ready stance.
+
+Animation across 4 frames (read row-major):
+- top-left: neutral idle, slight forward lean, ember glow at minimum
+- top-right: subtle inhale, robe edge lifts a few pixels, ember slightly brighter
+- bottom-left: small exhale, robe falls back, ember at peak with one tiny spark
+- bottom-right: settled neutral pose returning to start, ember dimming back
+
+ABSOLUTE RULES:
+1. EXACTLY 4 equal quadrants in a 2x2 grid. NO borders, NO grid lines, NO frames between cells.
+2. NO text, NO labels, NO numbers, NO arrows, NO UI, NO speech bubbles, NO watermark.
+3. The character has the IDENTICAL bounding box and IDENTICAL pixel scale in every cell.
+4. Character is centered in its cell, fills ~60% of the cell, equal magenta margin on all four sides.
+5. Background is 100% solid flat #FF00FF magenta in every cell, no gradients, no shadow, no floor plane.
+6. Entire character (including staff, ember, sparks, robe edges) must fit fully inside its own cell.
+7. Same character identity, same outfit, same proportions in every frame; only the breathing/ember-pulse changes.
+
+Square 1024x1024 image.
+
+Postprocess command:
+
+python3 ~/.cursor/skills/generate2dsprite/scripts/generate2dsprite.py process \
+  --input raw-sheet.png \
+  --target asset --mode idle \
+  --rows 2 --cols 2 \
+  --output-dir . \
+  --shared-scale --align bottom \
+  --component-mode largest --component-padding 6 --min-component-area 200 \
+  --threshold 100 --edge-threshold 150 \
+  --duration 250
+
+QC: all 4 frames passed, edge_touch=false, component_count<=2, output sizes ~80x105.
